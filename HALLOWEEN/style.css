@@ -1,0 +1,78 @@
+body {
+    color: #fa6701;
+    background: rgb(16, 138, 5);
+    background: linear-gradient(90deg, rgb(0, 36, 9) 0%, rgba(121,40,9,1) 100%, rgba(0,212,255,1) 100%); 
+}
+
+.sancreek-regular {
+    font-family: "Sancreek", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+ 
+
+h1 {
+    color:chocolate;
+}
+
+
+svg {
+    animation-name: flicker;
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    width: 200px;
+    height: auto;
+
+}
+
+
+/* .flicker-animation{
+  animation: flicker 1s infinite;
+} */
+
+
+/* @keyframes flicker { 
+    0% {
+        color: white;
+        text-shadow: (0 0) 10px white;
+    }
+    50% {
+        color: yellow;
+        text-shadow: (0 0) 10px yellow;
+    }
+    100% {
+        color: white;
+        text-shadow: (0 0) 10px white;
+    }
+    } */
+
+
+
+
+@keyframes flickerAnimation {
+    0%   { opacity:0; }
+    50%  { opacity:0; }
+    100% { opacity:100; }
+     }
+@-o-keyframes flickerAnimation{
+    0%   { opacity:1; }
+    50%  { opacity:0; }
+    100% { opacity:1; }
+    }
+@-moz-keyframes flickerAnimation{
+    0%   { opacity:1; }
+    50%  { opacity:0; }
+    100% { opacity:1; }
+    }
+@-webkit-keyframes flickerAnimation{
+    0%   { opacity:1; }
+    50%  { opacity:0; }
+    100% { opacity:1; }
+    }
+.animate-flicker {
+    -webkit-animation: flickerAnimation .5s infinite;
+    -moz-animation: flickerAnimation .5s infinite;
+    -o-animation: flickerAnimation .5s infinite;
+    animation: flickerAnimation .5s infinite;
+}
